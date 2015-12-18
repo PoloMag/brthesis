@@ -41,6 +41,12 @@
 \RequirePackage[alf,abnt-etal-list=0,abnt-and-type=&]{abntex2cite}}{%
 \RequirePackage[alf,abnt-etal-list=0]{abntex2cite}}	% Citações padrão ABNT
 
+% sinutix
+
+\ifthenelse{\boolean{isenglish}}{%
+\RequirePackage[output-decimal-marker={.},per-mode=symbol]{siunitx}}{%else
+\RequirePackage[output-decimal-marker={,},per-mode=symbol]{siunitx}}
+
 % change figure list in Brazilian
 \addto\captionsbrazil{
     \renewcommand{\listfigurename}{Lista de figuras}
@@ -72,7 +78,9 @@
   \bookmarksetup{startatroot}% 
 }
 
-\ifthenelse{\boolean{isenglish}}{}{%
+\ifthenelse{\boolean{isenglish}}{
+\selectlanguage{english}
+}{%
 \renewcommand{\equationautorefname}{Equação}%
 \renewcommand{\figureautorefname}{Figura}%
 \renewcommand{\tableautorefname}{Tabela}}
@@ -97,7 +105,7 @@
     \prebibhook
 
 }
-}
+
 
 % change section titles formatting
 \renewcommand{\ABNTEXchapterfont}{\rmfamily\scshape}
