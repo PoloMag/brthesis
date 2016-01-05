@@ -30,7 +30,9 @@ Existem três opções possíveis:
 
 ## Uso
 
-(Substitua `brthesis` por `brthesis/brthesis` conforme instruções acima)
+Veja os arquivos `example.tex` e `exemplo.tex` para templates básicos de teses relativamente completas. Algumas explicações seguem abaixo.
+
+(Substitua `brthesis` por `brthesis/brthesis` conforme instruções acima).
 
 ### Tamanho de papel
 
@@ -60,9 +62,11 @@ Para escrever em inglês:
 
 Nota: não tenho certeza sobre isso, mas como essa classe é baseada em [abnTeX2][abntex2], acho que você precisa "carregar" a linguagem `brazil`, mesmo que você escreva todo o documento em inglês. Se você escrever apenas `\documentclass[english]{brthesis}`, a linguagem `brazil` vai ser carregada como a padrão (a última linguagem a ser declarada é a que vai ser usada), fazendo com que os títulos como "Lista de figuras" apareçam em português.
 
-### Metadados
+### Metadados e PDF
 
 Veja nos arquivos de exemplos sobre como preencher o título, orientador etc. Veja a documentação da classe [abnTeX2][abntex2] sobre como usar essas informações para construir a folha de aprovação.
+
+Um dos pontos centrais de `brthesis` é criar PDFs "inteligentes". Os dados de títulos e autor são gravados no próprio arquivo (consulte o menu *Propriedades* ou similar no seu editor de PDF). Além disso, a capa, as listas de figura, tabelas etc e os capítulos são incluídos nos *bookmarks* do PDF, desde que você utilize os comandos usados nos templates: `\printcover`, `\printtoc` etc. 
 
 ### Pasta com figuras
 
@@ -76,9 +80,12 @@ Veja os templates desse repositório como um lembrete de outros arquivos `.tex` 
 
 É incluído o pacote {nomencl} para produção da lista de símbolos. A ajuda do [abnTeX2][abntex2] contém informações de como utilizá-lo.
 
+
 ### Outras informações
 
 Como já repetido, essa classe apenas configura as opções padrões do sistema [abnTeX2][abntex2], que deve ser consultado para mais informações.
+
+
 
 [abntex2]: http://www.abntex.net.br/
 [texlive]: https://www.tug.org/texlive/

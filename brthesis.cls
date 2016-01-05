@@ -97,10 +97,12 @@
 
 \ifthenelse{\boolean{isenglish}}{
 \selectlanguage{english}
+\newcommand{\covername}{Cover}
 }{%
 \renewcommand{\equationautorefname}{Equação}%
 \renewcommand{\figureautorefname}{Figura}%
-\renewcommand{\tableautorefname}{Tabela}}
+\renewcommand{\tableautorefname}{Tabela}%
+\newcommand{\covername}{Capa}}
 
 % table of contents formatting
 \cftsetindents{chapter}{0em}{1em}
@@ -139,7 +141,7 @@
 % with this command, figures in a 'fig' folder can be used as if they were in the top level folder
 \graphicspath{{fig/}}
 
-% when issueing the '\begin{document}' command, configure PDF information
+% commands to configure pdf printing
 \newcommand{\configurepdf}{
 \hypersetup{
   pdftitle={\@title}, 
@@ -153,3 +155,31 @@
   urlcolor=black,
   bookmarksdepth=4
 }}
+
+% these commands print cover and "list of ..." elements and automatically add PDf bookmarks to it
+
+
+\newcommand{\printcover}{%
+\pdfbookmark[0]{\covername}{cover}%
+\imprimircapa}
+
+\newcommand{\printlof}{%
+\pdfbookmark[0]{\listfigurename}{lof}%
+\listoffigures*%
+\cleardoublepage}
+
+\newcommand{\printlot}{%
+\pdfbookmark[0]{\listtablename}{lot}%
+\listoftables*%
+\cleardoublepage}
+
+\newcommand{\printlos}{%
+\renewcommand{\nomname}{\listadesimbolosname}%
+\pdfbookmark[0]{\nomname}{las}%
+\printnomenclature%
+\cleardoublepage}
+
+\newcommand{\printtoc}{%
+\pdfbookmark[0]{\contentsname}{toc}%
+\tableofcontents*%
+\cleardoublepage}

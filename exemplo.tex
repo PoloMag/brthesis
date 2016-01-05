@@ -44,7 +44,7 @@
 % ---
 % Capa
 % ---
-\imprimircapa
+\printcover
 % ---
 
 %% ---
@@ -117,38 +117,17 @@
 %\include{Abstract}
 % ---
 
-% ---
 % inserir lista de ilustrações
-% ---
-\pdfbookmark[0]{\listfigurename}{lof}
-\listoffigures*
-\cleardoublepage
-% ---
+\printlof
 
-% ---
 % inserir lista de tabelas
-% ---
-\pdfbookmark[0]{\listtablename}{lot}
-\listoftables*
-\cleardoublepage
-% ---
+\printlot
 
-
-% ---
 % inserir lista de símbolos
-\renewcommand{\nomname}{\listadesimbolosname}
-\pdfbookmark[0]{\nomname}{las}
-\printnomenclature
-%\printglossary
-\cleardoublepage
+\printlos
 
-% ---
 % inserir o sumario
-% ---
-\pdfbookmark[0]{\contentsname}{toc}
-\tableofcontents*
-\cleardoublepage
-% ---
+\printtoc
 
 % ----------------------------------------------------------
 % ELEMENTOS TEXTUAIS
