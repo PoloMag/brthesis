@@ -50,15 +50,15 @@ Obs: minha universidade pede que os documentos sejam impressos em tamanho A5 e f
 
 ### Idiomas
 
-Para escrever em português:
+Para escrever em português (usando A4 como exemplo):
 
-	\documentclass[brazil]{brthesis}
+	\documentclass[a4,brazil]{brthesis}
 
 Para escrever em inglês:
 
-	\documentclass[brazil,english]{brthesis}
+	\documentclass[a4,brazil,english]{brthesis}
 
-Nota: não tenho certeza sobre isso, mas como essa classe é baseada em [abnTeX2][abntex2], acho que você precisa "carregar" a linguagem `brazil`, mesmo que você escreva todo o documento em inglês. Se você escrever apenas `\documentclass[english]{brthesis}`, a linguagem `brazil` vai ser carregada como a padrão (a última linguagem a ser declarada é a que vai ser usada), fazendo com que os títulos como "Lista de figuras" apareçam em inglês.
+Nota: não tenho certeza sobre isso, mas como essa classe é baseada em [abnTeX2][abntex2], acho que você precisa "carregar" a linguagem `brazil`, mesmo que você escreva todo o documento em inglês. Se você escrever apenas `\documentclass[english]{brthesis}`, a linguagem `brazil` vai ser carregada como a padrão (a última linguagem a ser declarada é a que vai ser usada), fazendo com que os títulos como "Lista de figuras" apareçam em português.
 
 ### Metadados
 
