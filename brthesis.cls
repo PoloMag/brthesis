@@ -1,17 +1,32 @@
+% ----------
+% IDENTIFICATION
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{brthesis}[2015/12/17]
 
+% ----------
+% INITIAL CODE
 \RequirePackage{ifthen}
 
+% ----------
+% DECLARATION OF OPTIONS
 \newboolean{isenglish}
 \DeclareOption{english}{\setboolean{isenglish}{true}}
+
 
 \DeclareOption*{%
  \PassOptionsToClass{\CurrentOption}{abntex2}%
 }
+
+% ----------
+% EXECUTION OF OPTIONS
 \ProcessOptions\relax
 
+% ----------
+% LOADING
 \LoadClass[a4paper,twoside,12pt,sumario=tradicional]{abntex2}
+
+% ----------
+% MAIN CODE
 
 % standard packages for inputing accented characters
 \RequirePackage[utf8]{inputenc}
