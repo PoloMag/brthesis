@@ -12,6 +12,8 @@
 \newboolean{isenglish}
 \DeclareOption{english}{\setboolean{isenglish}{true}}
 
+\DeclareOption{a5}{\PassOptionsToClass{a5paper,10pt}{abntex2}}
+\DeclareOption{a4}{\PassOptionsToClass{a4paper,12pt}{abntex2}}
 
 \DeclareOption*{%
  \PassOptionsToClass{\CurrentOption}{abntex2}%
@@ -23,7 +25,7 @@
 
 % ----------
 % LOADING
-\LoadClass[a4paper,twoside,12pt,sumario=tradicional]{abntex2}
+\LoadClass[twoside,sumario=tradicional]{abntex2}
 
 % ----------
 % MAIN CODE

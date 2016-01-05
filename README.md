@@ -32,6 +32,22 @@ Existem três opções possíveis:
 
 (Substitua `brthesis` por `brthesis/brthesis` conforme instruções acima)
 
+### Tamanho de papel
+
+`brthesis` suporta duas construções comuns no meu trabalho. Para imprimir em A4 **e** simultaneamente usar fonte 12pt:
+
+	\documentclass[a4]{brthesis}
+
+Para imprimir A5 e, condizente com o tamanho menor, imprimir em 10pt:
+
+	\documentclass[a5]{brthesis}
+
+Note que as opções são diferentes dos usuais `a4paper` e `a5paper` porque, como falei, as opções de `brthesis` automaticamente ajustam o tamanho da fonte para melhor resultados.
+
+Se você não declarar nada, o padrão da classe `abntex2` será usado: tamanho A4 mas com fonte 10pt.
+
+Obs: minha universidade pede que os documentos sejam impressos em tamanho A5 e fonte 10,5pt. Não consegui achar uma maneira segura de especificar esses tamanhos arbitrários nas instalações comuns de LaTeX e portanto optei por usar 10pt, considerando que a diferença é imperceptível. Se você sabe quiser usar `brthesis` e tiver o mesmo problema, faça-o por sua conta e risco.
+
 ### Idiomas
 
 Para escrever em português:
