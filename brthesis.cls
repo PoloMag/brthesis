@@ -129,10 +129,27 @@
 \renewcommand{\ABNTEXsectionfont}{\rmfamily\bfseries}
 \renewcommand{\ABNTEXsubsectionfont}{\rmfamily\itshape}
 
+% load some other useful packages
 \RequirePackage{lastpage}
 \RequirePackage{indentfirst}
 
 \RequirePackage{esdiff}
 \RequirePackage[noprefix]{nomencl}
 
+% with this command, figures in a 'fig' folder can be used as if they were in the top level folder
 \graphicspath{{fig/}}
+
+% when issueing the '\begin{document}' command, configure PDF information
+\newcommand{\configurepdf}{
+\hypersetup{
+  pdftitle={\@title}, 
+  pdfauthor={\@author},
+  pdfsubject={\imprimirpreambulo},
+  pdfcreator={LaTeX with abnTeX2},
+  colorlinks=true,       		% false: boxed links; true: colored links
+  linkcolor=black,          	% color of internal links
+  citecolor=black,        		% color of links to bibliography
+  filecolor=black,      		% color of file links
+  urlcolor=black,
+  bookmarksdepth=4
+}}
