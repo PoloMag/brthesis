@@ -134,3 +134,5 @@
 
 \RequirePackage{esdiff}
 \RequirePackage[noprefix]{nomencl}
+
+\graphicspath{{fig/}}
