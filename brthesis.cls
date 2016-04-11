@@ -101,10 +101,10 @@
 % this commands rename reference names to be used by \autoref
 \renewcommand{\figureautorefname}{Fig.}
 \renewcommand{\tableautorefname}{Tab.}
-\renewcommand{\chapterautorefname}{Chapter}
-\renewcommand{\sectionautorefname}{Section}
-\renewcommand{\subsectionautorefname}{Section}
-\renewcommand{\subsubsectionautorefname}{Section}
+\renewcommand{\chapterautorefname}{Chap.}
+\renewcommand{\sectionautorefname}{Sec.}
+\renewcommand{\subsectionautorefname}{Sec.}
+\renewcommand{\subsubsectionautorefname}{Sec.}
 % from https://tex.stackexchange.com/questions/52410/how-to-use-the-command-autoref-to-implement-the-same-effect-when-use-the-comman
 \def\equationautorefname~#1\null{%
   Eq.~(#1)\null
@@ -113,7 +113,7 @@
 % this commands rename reference names to be used by \autoref
 \renewcommand{\figureautorefname}{Fig.}
 \renewcommand{\tableautorefname}{Tab.}
-\renewcommand{\chapterautorefname}{Capítulo}
+\renewcommand{\chapterautorefname}{Cap.}
 \renewcommand{\sectionautorefname}{Seção}
 \renewcommand{\subsectionautorefname}{Seção}
 \renewcommand{\subsubsectionautorefname}{Seção}

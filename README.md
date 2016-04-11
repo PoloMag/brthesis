@@ -69,7 +69,7 @@ Veja nos arquivos de exemplos sobre como preencher o título, orientador etc. Ve
 
 Um dos pontos centrais de `brthesis` é criar PDFs "inteligentes". Os dados de títulos e autor são gravados no próprio arquivo (consulte o menu *Propriedades* ou similar no seu editor de PDF). Além disso, a capa, as listas de figura, tabelas etc e os capítulos são incluídos nos *bookmarks* do PDF, desde que você utilize os comandos usados nos templates: `\printcover`, `\printtoc` etc.
 
-Outra característica é que, com o pacote `hyperref`, é possível criar links de hipertexto dentro do documento. Para isso, em vez de usar os comandos usuais de referência como `\ref`, use `\autoref` para tudo que você for referenciar, sem precisar escrever o nome do elemento; por exemplo, em vez de escrever `ver Fig.~\ref{fig:1}`, escreva `ver \autoref{fig:1}` que o resultado será o mesmo. Com as customizações feitas por `brthesis`, `\autoref` produzirá "Fig. X", "Tab. X", "Eq. (X.Y)", "Capítulo X", "Seção X" e correspondentes termos em inglês.
+Outra característica é que, com o pacote `hyperref`, é possível criar links de hipertexto dentro do documento. Para isso, em vez de usar os comandos usuais de referência como `\ref`, use `\autoref` para tudo que você for referenciar, sem precisar escrever o nome do elemento; por exemplo, em vez de escrever `ver Fig.~\ref{fig:1}`, escreva `ver \autoref{fig:1}` que o resultado será o mesmo. Com as customizações feitas por `brthesis`, `\autoref` produzirá "Fig. X", "Tab. X", "Eq. (X.Y)", "Cap. X", "Seção X" e correspondentes termos em inglês.
 
 ### Pasta com figuras
 
