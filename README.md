@@ -17,6 +17,7 @@ Essa classe foi desenvolvida para dissertações e teses. As suas característic
 * Os títulos de seções são formatados em negrito
 * Os títulos de subseções são formatados em itálico
 
+
 Alguns pacotes comuns em produções científicas, especialmente na área de engenharia, são carregados. Todos eles podem ser instalados pelo [TeX Live][texlive].
 
 
@@ -66,7 +67,9 @@ Nota: não tenho certeza sobre isso, mas como essa classe é baseada em [abnTeX2
 
 Veja nos arquivos de exemplos sobre como preencher o título, orientador etc. Veja a documentação da classe [abnTeX2][abntex2] sobre como usar essas informações para construir a folha de aprovação.
 
-Um dos pontos centrais de `brthesis` é criar PDFs "inteligentes". Os dados de títulos e autor são gravados no próprio arquivo (consulte o menu *Propriedades* ou similar no seu editor de PDF). Além disso, a capa, as listas de figura, tabelas etc e os capítulos são incluídos nos *bookmarks* do PDF, desde que você utilize os comandos usados nos templates: `\printcover`, `\printtoc` etc. 
+Um dos pontos centrais de `brthesis` é criar PDFs "inteligentes". Os dados de títulos e autor são gravados no próprio arquivo (consulte o menu *Propriedades* ou similar no seu editor de PDF). Além disso, a capa, as listas de figura, tabelas etc e os capítulos são incluídos nos *bookmarks* do PDF, desde que você utilize os comandos usados nos templates: `\printcover`, `\printtoc` etc.
+
+Outra característica é que, com o pacote `hyperref`, é possível criar links de hipertexto dentro do documento. Para isso, em vez de usar os comandos usuais de referência como `\ref`, use `\autoref` para tudo que você for referenciar, sem precisar escrever o nome do elemento; por exemplo, em vez de escrever `ver Fig.~\ref{fig:1}`, escreva `ver \autoref{fig:1}` que o resultado será o mesmo. Com as customizações feitas por `brthesis`, `\autoref` produzirá "Fig. X", "Tab. X", "Eq. (X.Y)", "Capítulo X", "Seção X" e correspondentes termos em inglês.
 
 ### Pasta com figuras
 
@@ -78,7 +81,7 @@ Veja os templates desse repositório como um lembrete de outros arquivos `.tex` 
 
 ### nomenclature
 
-É incluído o pacote {nomencl} para produção da lista de símbolos. A ajuda do [abnTeX2][abntex2] contém informações de como utilizá-lo.
+É incluído o pacote `nomencl` para produção da lista de símbolos. A ajuda do [abnTeX2][abntex2] contém informações de como utilizá-lo.
 
 
 ### Outras informações

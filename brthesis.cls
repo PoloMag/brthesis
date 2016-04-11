@@ -98,10 +98,29 @@
 \ifthenelse{\boolean{isenglish}}{
 \selectlanguage{english}
 \newcommand{\covername}{Cover}
+% this commands rename reference names to be used by \autoref
+\renewcommand{\figureautorefname}{Fig.}
+\renewcommand{\tableautorefname}{Tab.}
+\renewcommand{\chapterautorefname}{Chapter}
+\renewcommand{\sectionautorefname}{Section}
+\renewcommand{\subsectionautorefname}{Section}
+\renewcommand{\subsubsectionautorefname}{Section}
+% from https://tex.stackexchange.com/questions/52410/how-to-use-the-command-autoref-to-implement-the-same-effect-when-use-the-comman
+\def\equationautorefname~#1\null{%
+  Eq.~(#1)\null
+}%
 }{%
-\renewcommand{\equationautorefname}{Equação}%
-\renewcommand{\figureautorefname}{Figura}%
-\renewcommand{\tableautorefname}{Tabela}%
+% this commands rename reference names to be used by \autoref
+\renewcommand{\figureautorefname}{Fig.}
+\renewcommand{\tableautorefname}{Tab.}
+\renewcommand{\chapterautorefname}{Capítulo}
+\renewcommand{\sectionautorefname}{Seção}
+\renewcommand{\subsectionautorefname}{Seção}
+\renewcommand{\subsubsectionautorefname}{Seção}
+% from https://tex.stackexchange.com/questions/52410/how-to-use-the-command-autoref-to-implement-the-same-effect-when-use-the-comman
+\def\equationautorefname~#1\null{%
+  Eq.~(#1)\null
+}%
 \newcommand{\covername}{Capa}}
 
 % table of contents formatting
@@ -183,3 +202,4 @@
 \pdfbookmark[0]{\contentsname}{toc}%
 \tableofcontents*%
 \cleardoublepage}
+
