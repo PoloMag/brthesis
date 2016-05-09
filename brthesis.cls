@@ -97,26 +97,29 @@
 
 \ifthenelse{\boolean{isenglish}}{
 \selectlanguage{english}
-\newcommand{\covername}{Cover}
 % this commands rename reference names to be used by \autoref
+\addto\captionsenglish{
+\newcommand{\covername}{Cover}
 \renewcommand{\figureautorefname}{Fig.}
-\renewcommand{\tableautorefname}{Tab.}
-\renewcommand{\chapterautorefname}{Chap.}
-\renewcommand{\sectionautorefname}{Sec.}
-\renewcommand{\subsectionautorefname}{Sec.}
-\renewcommand{\subsubsectionautorefname}{Sec.}
+\renewcommand{\tableautorefname}{Table}
+\renewcommand{\chapterautorefname}{Chapter}
+\renewcommand{\sectionautorefname}{Section}
+\renewcommand{\subsectionautorefname}{Section}
+\renewcommand{\subsubsectionautorefname}{Section}
+}
 % from https://tex.stackexchange.com/questions/52410/how-to-use-the-command-autoref-to-implement-the-same-effect-when-use-the-comman
 \def\equationautorefname~#1\null{%
   Eq.~(#1)\null
 }%
 }{%
 % this commands rename reference names to be used by \autoref
+\addto\captionsbrazil{
 \renewcommand{\figureautorefname}{Fig.}
 \renewcommand{\tableautorefname}{Tab.}
-\renewcommand{\chapterautorefname}{Cap.}
+\renewcommand{\chapterautorefname}{Capítulo}
 \renewcommand{\sectionautorefname}{Seção}
 \renewcommand{\subsectionautorefname}{Seção}
-\renewcommand{\subsubsectionautorefname}{Seção}
+\renewcommand{\subsubsectionautorefname}{Seção}}
 % from https://tex.stackexchange.com/questions/52410/how-to-use-the-command-autoref-to-implement-the-same-effect-when-use-the-comman
 \def\equationautorefname~#1\null{%
   Eq.~(#1)\null
