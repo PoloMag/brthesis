@@ -95,6 +95,8 @@
   \bookmarksetup{startatroot}% 
 }
 
+\newcommand{\covername}{}
+
 \ifthenelse{\boolean{isenglish}}{
 \selectlanguage{english}
 % this commands rename reference names to be used by \autoref
@@ -106,7 +108,7 @@
 \renewcommand{\sectionautorefname}{Section}
 \renewcommand{\subsectionautorefname}{Section}
 \renewcommand{\subsubsectionautorefname}{Section}
-}
+}%
 % from https://tex.stackexchange.com/questions/52410/how-to-use-the-command-autoref-to-implement-the-same-effect-when-use-the-comman
 \def\equationautorefname~#1\null{%
   Eq.~(#1)\null
