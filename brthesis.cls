@@ -99,7 +99,7 @@
 \selectlanguage{english}
 % this commands rename reference names to be used by \autoref
 \addto\captionsenglish{
-\newcommand{\covername}{Cover}
+\renewcommand{\covername}{Cover}
 \renewcommand{\figureautorefname}{Fig.}
 \renewcommand{\tableautorefname}{Table}
 \renewcommand{\chapterautorefname}{Chapter}
@@ -114,6 +114,7 @@
 }{%
 % this commands rename reference names to be used by \autoref
 \addto\captionsbrazil{
+\renewcommand{\covername}{Capa}
 \renewcommand{\figureautorefname}{Fig.}
 \renewcommand{\tableautorefname}{Tab.}
 \renewcommand{\chapterautorefname}{Capítulo}
@@ -124,7 +125,7 @@
 \def\equationautorefname~#1\null{%
   Eq.~(#1)\null
 }%
-\newcommand{\covername}{Capa}}
+}
 
 % table of contents formatting
 \cftsetindents{chapter}{0em}{1em}
