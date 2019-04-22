@@ -1,7 +1,7 @@
 % ----------
 % IDENTIFICATION
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{brthesis}[2015/12/17]
+\ProvidesClass{brthesis}[2019/04/22]
 
 % ----------
 % INITIAL CODE
@@ -108,7 +108,10 @@
 \renewcommand{\sectionautorefname}{Section}
 \renewcommand{\subsectionautorefname}{Section}
 \renewcommand{\subsubsectionautorefname}{Section}
-}%
+\renewcommand{\anexoname}{ANNEX}
+\renewcommand{\anexosname}{Annex}
+}
+
 % from https://tex.stackexchange.com/questions/52410/how-to-use-the-command-autoref-to-implement-the-same-effect-when-use-the-comman
 \def\equationautorefname~#1\null{%
   Eq.~(#1)\null
@@ -150,10 +153,13 @@
 
 }
 
-
+\captionnamefont{\small}
+\RequirePackage[font=small]{caption}
 % change section titles formatting
-\renewcommand{\ABNTEXchapterfont}{\rmfamily\scshape}
+\renewcommand{\ABNTEXchapterfont}{\rmfamily\scshape\bfseries}
+\renewcommand{\ABNTEXchapterfontsize}{\Large}
 \renewcommand{\ABNTEXsectionfont}{\rmfamily\bfseries}
+\renewcommand{\ABNTEXsectionfontsize}{\large}
 \renewcommand{\ABNTEXsubsectionfont}{\rmfamily\itshape}
 
 % load some other useful packages
